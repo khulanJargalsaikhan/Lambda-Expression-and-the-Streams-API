@@ -11,13 +11,14 @@ public class App {
 		walker(robot);
 		
 		
-		// convert to Lambda Expression
-		walker( () -> System.out.println("Custom object walking... "));
+		// Functional Programming
+		// This Walkable is Functional Interface with just one Abstract method
+		Walkable aBlockOfCode = () -> {
+			System.out.println("Custom object walking... ");
+			System.out.println("The object is tripped... ");
+		};
 		
-		
-		
-		
-		
+		walker(aBlockOfCode);
 
 	}
 	
