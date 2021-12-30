@@ -11,16 +11,13 @@ public class App {
 		walker(robot);
 		
 		
-		// This was the only way to segregate certain functionality from class definition Before java 8
-		walker(new Walkable() {
-
-			@Override
-			public void walk() {
-				System.out.println("Custom object walking... ");
-				
-			}
-			
-		});
+		// convert to Lambda Expression
+		walker( () -> System.out.println("Custom object walking... "));
+		
+		
+		
+		
+		
 
 	}
 	
