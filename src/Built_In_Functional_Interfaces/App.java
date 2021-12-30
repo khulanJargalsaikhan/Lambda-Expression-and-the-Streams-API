@@ -45,11 +45,11 @@ public class App {
 		});
 
 		// this used CarCondition functional interface that we created down below
-		System.out.println("Printing cars between price 18000 and 22000");
-		printCars(cars, (c) -> c.getPrice() >= 18000 && c.getPrice() <= 22000);
-
-		System.out.println("Print blue cars");
-		printCars(cars, (c) -> c.getColor().equals("Blue"));
+//		System.out.println("Printing cars between price 18000 and 22000");
+//		printCars(cars, (c) -> c.getPrice() >= 18000 && c.getPrice() <= 22000);
+//
+//		System.out.println("Print blue cars");
+//		printCars(cars, (c) -> c.getColor().equals("Blue"));
 		
 		
 		
