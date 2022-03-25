@@ -99,8 +99,13 @@ public class App {
 		
 		
 		Stream<String> rows2 = Files.lines(Paths.get("files/stockDataCsv.txt"));
+		//x represents a line, then splits that line with comma, and then treats the whole line as an array 
+		//basically, it is mapping String to Array
 		rows2.map(x -> x.split(","))
+			//only interested in if that length of the array element is greater than 3
 			.filter(x -> x.length > 3)
+			//only interested in values with array index number 1 is greater than 110
+			//trim() - trims the white space
 			.filter(x -> Integer.parseInt(x[1].trim()) > 110)
 			.forEach(x -> System.out.println(x[0].trim() + " " + x[1].trim() + " " + x[2].trim() + " " + x[3].trim()));
 		rows2.close();
