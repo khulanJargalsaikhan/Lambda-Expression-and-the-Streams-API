@@ -54,7 +54,7 @@ public class App {
 		
 		
 		// this used built-in functional interface
-		Function<Car, String> priceAndColor = (c) -> " price = " + c.getPrice() + " color = "+ c.getColor();			
+		Function<Car, String> priceAndColor = c -> " price = " + c.getPrice() + " color = "+ c.getColor();			
 		String stringCar = priceAndColor.apply(cars.get(0));
 		System.out.println(stringCar);
 		
